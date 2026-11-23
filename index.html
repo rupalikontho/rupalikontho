@@ -64,6 +64,7 @@
       <nav class="site-nav" id="site-nav" aria-label="প্রধান মেনু" data-i18n-attr="aria-label:nav.aria">
         <a href="#music" data-i18n="nav.music">সংগীত</a>
         <a href="/lyrics" data-i18n="nav.lyrics">লিরিক্স</a>
+        <a href="/artists" data-i18n="nav.artists">শিল্পী</a>
         <a href="#about" data-i18n="nav.about">আমাদের কথা</a>
         <a href="#services" data-i18n="nav.services">সেবা</a>
         <a href="#join" data-i18n="nav.join">শিল্পী আহ্বান</a>
@@ -215,6 +216,23 @@
       </div>
     </section>
 
+    <!-- ===== শিল্পী (ঝলক — শিল্পী যোগ হলে নিজে থেকেই দেখাবে) ===== -->
+    <section class="section artists-teaser" id="artists" data-artists-teaser hidden>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-i18n="artists.eyebrow">আমাদের শিল্পীরা</p>
+            <h2 data-i18n="artists.home.h2">যাঁদের কণ্ঠে রূপালী কণ্ঠ</h2>
+          </div>
+          <a class="text-link" href="/artists">
+            <span data-i18n="artists.viewAll">সব শিল্পী দেখুন</span>
+            <svg class="flip-rtl" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="artist-grid artist-grid--teaser" id="artists-teaser-grid"></div>
+      </div>
+    </section>
+
     <!-- ===== আমাদের কথা ===== -->
     <section class="section band" id="about">
       <div class="container about-inner">
@@ -354,6 +372,7 @@
         <ul class="footer-list">
           <li><a href="#music" data-i18n="nav.music">সংগীত</a></li>
           <li><a href="/lyrics" data-i18n="nav.lyrics">লিরিক্স</a></li>
+          <li><a href="/artists" data-i18n="nav.artists">শিল্পী</a></li>
           <li><a href="#about" data-i18n="nav.about">আমাদের কথা</a></li>
           <li><a href="#services" data-i18n="nav.services">সেবা</a></li>
           <li><a href="#join" data-i18n="nav.join">শিল্পী আহ্বান</a></li>
@@ -387,5 +406,8 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/i18n-strings.js"></script>
   <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/lyrics-data.js"></script>
+  <script src="assets/js/artists-data.js"></script>
+  <script src="assets/js/artists.js"></script>
 </body>
 </html>

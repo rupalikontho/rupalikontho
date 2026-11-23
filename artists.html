@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="bn" data-title-key="title.artists">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () { try { var l = new URLSearchParams(location.search).get("lang") || localStorage.getItem("rk-lang");
+      if (/^(en|hi|ur|ar)$/.test(l || "")) { var h = document.documentElement; h.lang = l; h.dir = (l === "ur" || l === "ar") ? "rtl" : "ltr"; } } catch (e) {} })();
+  </script>
+  <title>শিল্পী — রূপালী কণ্ঠ</title>
+  <meta name="description" content="রূপালী কণ্ঠের কণ্ঠশিল্পী, গীতিকার ও সুরকারদের পরিচিতি ও তাঁদের গান।">
+  <meta name="theme-color" content="#120e0d">
+  <link rel="canonical" href="https://rupalikontho.com/artists">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="রূপালী কণ্ঠ">
+  <meta property="og:title" content="শিল্পী — রূপালী কণ্ঠ">
+  <meta property="og:description" content="রূপালী কণ্ঠের কণ্ঠশিল্পী, গীতিকার ও সুরকারদের পরিচিতি।">
+  <meta property="og:url" content="https://rupalikontho.com/artists">
+  <meta property="og:image" content="https://rupalikontho.com/assets/img/og-image.png">
+  <meta property="og:locale" content="bn_BD">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo-192.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Bebas+Neue&family=Hind+Siliguri:wght@400;500;600&family=Tiro+Bangla&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">মূল অংশে যান</a>
+
+  <!-- ===== হেডার ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="রূপালী কণ্ঠ — হোম" data-i18n-attr="aria-label:home.aria">
+        <img class="brand-logo" src="assets/img/logo-192.png" width="48" height="48" alt="">
+        <span class="brand-text">
+          <span class="brand-name" lang="bn">রূপালী কণ্ঠ</span>
+          <span class="brand-latin">RUPALI KONTHO</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="মেনু খুলুন" data-i18n-attr="aria-label:menu.open">
+        <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="প্রধান মেনু" data-i18n-attr="aria-label:nav.aria">
+        <a href="/#music" data-i18n="nav.music">সংগীত</a>
+        <a href="/lyrics" data-i18n="nav.lyrics">লিরিক্স</a>
+        <a href="/artists" aria-current="page" data-i18n="nav.artists">শিল্পী</a>
+        <a href="/#about" data-i18n="nav.about">আমাদের কথা</a>
+        <a href="/#services" data-i18n="nav.services">সেবা</a>
+        <a href="/#join" data-i18n="nav.join">শিল্পী আহ্বান</a>
+        <a class="nav-cta" href="#contact" data-i18n="nav.contact">যোগাযোগ</a>
+      </nav>
+
+      <div class="lang-switch" data-lang-switch></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== পেজ শিরোনাম ===== -->
+    <section class="page-hero" id="artists-top">
+      <div class="container">
+        <p class="eyebrow" data-i18n="artists.eyebrow">আমাদের শিল্পীরা</p>
+        <h1 data-i18n="artists.h1">শিল্পী</h1>
+        <p class="lead" data-i18n="artists.lead">যাঁদের কণ্ঠ, কথা আর সুরে প্রাণ পায় রূপালী কণ্ঠের প্রতিটি পরিবেশনা।</p>
+      </div>
+    </section>
+
+    <section class="lyrics-section">
+      <div class="container">
+
+        <!-- ===== তালিকা ===== -->
+        <div id="artists-list-view">
+          <div class="lyrics-toolbar" id="artists-toolbar">
+            <div class="chips" role="group" aria-label="ভূমিকা অনুযায়ী বাছাই" data-i18n-attr="aria-label:artists.chips.aria" id="artists-chips">
+              <button type="button" class="chip" data-role="" aria-pressed="true" data-i18n="lyrics.all">সব</button>
+              <button type="button" class="chip" data-role="singer" aria-pressed="false" data-i18n="role.singer">কণ্ঠশিল্পী</button>
+              <button type="button" class="chip" data-role="lyricist" aria-pressed="false" data-i18n="role.lyricist">গীতিকার</button>
+              <button type="button" class="chip" data-role="composer" aria-pressed="false" data-i18n="role.composer">সুরকার</button>
+            </div>
+          </div>
+
+          <p class="lyrics-count" id="artists-count" aria-live="polite"></p>
+          <div class="artist-grid" id="artists-grid"></div>
+
+          <div class="lyrics-empty" id="artists-no-results" hidden>
+            <h2 data-i18n="artists.none.h">এই ভূমিকায় এখনো কোনো শিল্পী নেই</h2>
+          </div>
+
+          <div class="lyrics-empty" id="artists-coming-soon" hidden>
+            <svg width="56" height="56" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3 19.5c.6-3.3 3-5.2 6-5.2s5.4 1.9 6 5.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="17" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M16.5 14.4c2.4.1 4 1.6 4.5 4.1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            <h2 data-i18n="artists.soon.h">শিল্পী পরিচিতি শীঘ্রই আসছে</h2>
+            <p data-i18n="artists.soon.p">রূপালী কণ্ঠের কণ্ঠশিল্পী, গীতিকার ও সুরকারদের পরিচয় এখানে যোগ করা হবে।</p>
+            <a class="btn btn-ghost" href="/#join"><span data-i18n="hero.cta.join">শিল্পী হিসেবে যুক্ত হোন</span></a>
+          </div>
+        </div>
+
+        <!-- ===== একজন শিল্পী ===== -->
+        <article class="artist-detail" id="artist-detail" hidden>
+          <a class="back-link" href="#" id="artist-back">
+            <svg class="flip-rtl" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="artists.back">সব শিল্পী</span>
+          </a>
+
+          <div class="artist-profile">
+            <div class="artist-profile-photo" id="ad-photo"></div>
+            <div class="artist-info">
+              <div class="artist-roles" id="ad-roles"></div>
+              <h2 id="ad-name" lang="bn"></h2>
+              <p class="artist-bio" id="ad-bio" hidden></p>
+              <div class="artist-links">
+                <a class="btn btn-ghost btn-sm" id="ad-youtube" href="#" target="_blank" rel="noopener" hidden>
+                  <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9v6l5-3z" fill="currentColor"/></svg>
+                  <span data-i18n="social.youtube">ইউটিউব</span>
+                </a>
+                <a class="btn btn-ghost btn-sm" id="ad-facebook" href="#" target="_blank" rel="noopener" hidden>
+                  <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4.5h-3A3.5 3.5 0 0 0 10.5 8v2.5H8V14h2.5v6H14v-6h2.6l.4-3.5h-3V8.6c0-.3.3-.6.6-.6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                  <span data-i18n="social.facebook">ফেসবুক</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <section class="artist-songs">
+            <h3 data-i18n="artists.songs">এই শিল্পীর গান</h3>
+            <ul class="song-list" id="ad-songs"></ul>
+            <p class="artist-songs-empty" id="ad-songs-empty" data-i18n="artists.songs.none" hidden>লিরিক্স পেজে এই শিল্পীর গান এখনো যোগ হয়নি।</p>
+          </section>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== ফুটার / যোগাযোগ ===== -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="রূপালী কণ্ঠ — হোম" data-i18n-attr="aria-label:home.aria">
+          <img class="brand-logo" src="assets/img/logo-192.png" width="48" height="48" alt="">
+          <span class="brand-text">
+            <span class="brand-name" lang="bn">রূপালী কণ্ঠ</span>
+            <span class="brand-latin">RUPALI KONTHO</span>
+          </span>
+        </a>
+        <p data-i18n="footer.tagline">কণ্ঠে কণ্ঠে ঈমানের সুর।</p>
+      </div>
+
+      <div>
+        <h2 class="footer-title" data-i18n="nav.contact">যোগাযোগ</h2>
+        <ul class="footer-list">
+          <li><a href="mailto:info@rupalikontho.com" data-link="email" data-text dir="ltr">info@rupalikontho.com</a></li>
+          <li data-link-row="phone"><a href="#" data-link="phone" data-text></a></li>
+          <li data-link-row="address"><span data-text-of="address"></span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer-title" data-i18n="footer.links">দ্রুত লিংক</h2>
+        <ul class="footer-list">
+          <li><a href="/#music" data-i18n="nav.music">সংগীত</a></li>
+          <li><a href="/lyrics" data-i18n="nav.lyrics">লিরিক্স</a></li>
+          <li><a href="/artists" data-i18n="nav.artists">শিল্পী</a></li>
+          <li><a href="/#about" data-i18n="nav.about">আমাদের কথা</a></li>
+          <li><a href="/#services" data-i18n="nav.services">সেবা</a></li>
+          <li><a href="/#join" data-i18n="nav.join">শিল্পী আহ্বান</a></li>
+        </ul>
+      </div>
+
+      <div data-social-block>
+        <h2 class="footer-title" data-i18n="footer.follow">আমাদের সাথে থাকুন</h2>
+        <div class="social">
+          <a href="#" data-link="youtube" data-hide-empty aria-label="ইউটিউব" data-i18n-attr="aria-label:social.youtube">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9v6l5-3z" fill="currentColor"/></svg>
+            <span data-i18n="social.youtube">ইউটিউব</span>
+          </a>
+          <a href="#" data-link="facebook" data-hide-empty aria-label="ফেসবুক" data-i18n-attr="aria-label:social.facebook">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4.5h-3A3.5 3.5 0 0 0 10.5 8v2.5H8V14h2.5v6H14v-6h2.6l.4-3.5h-3V8.6c0-.3.3-.6.6-.6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <span data-i18n="social.facebook">ফেসবুক</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="footer-bottom-inner">
+        <p>© <span data-year>২০২৬</span> <span data-i18n="footer.rights">রূপালী কণ্ঠ। সর্বস্বত্ব সংরক্ষিত।</span></p>
+        <p dir="ltr">rupalikontho.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n-strings.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/lyrics-data.js"></script>
+  <script src="assets/js/artists-data.js"></script>
+  <script src="assets/js/artists.js"></script>
+</body>
+</html>

@@ -108,7 +108,8 @@
       el.textContent = num(new Date().getFullYear());
     });
     var tk = document.documentElement.getAttribute("data-title-key");
-    if (tk && !document.body.classList.contains("lyric-open")) document.title = t(tk);
+    var b = document.body.classList;
+    if (tk && !b.contains("lyric-open") && !b.contains("detail-open")) document.title = t(tk);
   }
 
   // ---------- ভাষা বাছাইয়ের মেনু ----------

@@ -8,4 +8,8 @@
     <loc>https://rupalikontho.com/lyrics</loc>
     <changefreq>weekly</changefreq>
   </url>
+  <url>
+    <loc>https://rupalikontho.com/artists</loc>
+    <changefreq>weekly</changefreq>
+  </url>
 </urlset>
