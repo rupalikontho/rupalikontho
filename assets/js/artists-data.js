@@ -69,6 +69,18 @@ window.ARTISTS = [
     bio_en: "", bio_hi: "", bio_ur: "", bio_ar: "",
     youtube: "",
     facebook: ""
+  },
+
+  {
+    slug: "jalal-uddin-abrar",
+    name: "জালাল উদ্দিন আবরার",
+    name_en: "Jalal Uddin Abrar",
+    roles: ["singer"],
+    photo: "assets/img/artists/jalal-uddin-abrar.jpg",
+    bio: "",
+    bio_en: "", bio_hi: "", bio_ur: "", bio_ar: "",
+    youtube: "",
+    facebook: ""
   }
 
 ];
