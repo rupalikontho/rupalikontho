@@ -95,8 +95,7 @@ p { text-wrap: pretty; }
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  gap: 16px;
   min-height: 76px;
 }
 
@@ -104,6 +103,7 @@ p { text-wrap: pretty; }
   display: inline-flex;
   align-items: center;
   gap: 12px;
+  margin-inline-end: auto;
   text-decoration: none;
   color: var(--text);
 }
@@ -141,7 +141,7 @@ p { text-wrap: pretty; }
 }
 .site-nav a:hover { color: var(--text); background: var(--surface); }
 .site-nav .nav-cta {
-  margin-left: 8px;
+  margin-inline-start: 8px;
   color: var(--text);
   border: 1px solid var(--line-2);
 }
@@ -646,8 +646,9 @@ body.nav-open .menu-toggle .icon-close { display: block; }
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-@media (max-width: 860px) {
-  .menu-toggle { display: grid; }
+@media (max-width: 1180px) {
+  .menu-toggle { display: grid; order: 3; }
+  .lang-switch { order: 2; }
 
   .site-nav {
     position: absolute;
@@ -677,7 +678,9 @@ body.nav-open .menu-toggle .icon-close { display: block; }
     border-radius: 999px;
     border: 1px solid var(--line-2);
   }
+}
 
+@media (max-width: 860px) {
   .hero-inner,
   .about-inner,
   .join-card { grid-template-columns: minmax(0, 1fr); }
@@ -925,7 +928,7 @@ body.lyric-open .lyrics-section { padding-top: clamp(24px, 4vw, 48px); }
   font-size: 17px;
   cursor: pointer;
 }
-.icon-btn + .icon-btn { border-left: 1px solid var(--line-2); }
+.icon-btn + .icon-btn { border-inline-start: 1px solid var(--line-2); }
 .icon-btn:hover { background: var(--surface); }
 .btn-sm { min-height: 44px; padding: 0 20px; font-size: 16px; }
 
@@ -945,3 +948,137 @@ body.lyric-open .lyrics-section { padding-top: clamp(24px, 4vw, 48px); }
   .search-field { flex-basis: 100%; max-width: none; }
   .lyric-card h3 { font-size: 22px; }
 }
+
+/* ================================================================
+   ভাষা বদলানোর মেনু
+   ================================================================ */
+.lang-switch { position: relative; }
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.lang-btn:hover,
+.lang-switch.is-open .lang-btn { border-color: var(--silver); background: var(--surface); }
+.lang-btn-flag { display: inline-flex; }
+.lang-chevron { color: var(--muted); transition: transform 0.2s; }
+.lang-switch.is-open .lang-chevron { transform: rotate(180deg); }
+
+.flag {
+  flex: none;
+  width: 24px;
+  height: 16px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  inset-inline-end: 0;
+  z-index: 60;
+  min-width: 210px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: #16101a;
+  border: 1px solid var(--line-2);
+  border-radius: 14px;
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.7);
+}
+.lang-menu li + li { border-top: 1px solid var(--line); }
+
+.lang-opt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 48px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text);
+  font-size: 17px;
+  text-align: start;
+  cursor: pointer;
+}
+.lang-opt:hover,
+.lang-opt:focus-visible { background: var(--surface); }
+.lang-opt-name { flex: 1; }
+.lang-opt[lang="bn"] { font-family: "Hind Siliguri", "Noto Sans Bengali", sans-serif; }
+.lang-opt[lang="en"] { font-family: "Hind Siliguri", system-ui, sans-serif; }
+.lang-opt[lang="hi"] { font-family: "Hind", "Noto Sans Devanagari", "Nirmala UI", sans-serif; }
+.lang-opt[lang="ur"] { font-family: "Noto Nastaliq Urdu", "Urdu Typesetting", "Noto Naskh Arabic", serif; }
+.lang-opt[lang="ar"] { font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif; }
+.lang-check { visibility: hidden; color: var(--orange); }
+.lang-opt[aria-current="true"] { font-weight: 600; }
+.lang-opt[aria-current="true"] .lang-check { visibility: visible; }
+
+.lang-note {
+  margin: 10px 0 0;
+  font-size: 15px;
+  color: var(--orange);
+}
+
+@media (max-width: 560px) {
+  .lang-btn-name { display: none; }
+  .lang-btn { padding: 0 10px; }
+}
+
+/* ================================================================
+   ভাষাভিত্তিক ফন্ট ও ডান-থেকে-বাম (উর্দু, আরবি)
+   ================================================================ */
+html[lang="hi"] {
+  --font-body: "Hind", "Noto Sans Devanagari", "Nirmala UI", sans-serif;
+  --font-display: "Tiro Devanagari Hindi", "Noto Serif Devanagari", "Hind", serif;
+}
+html[lang="ur"] {
+  --font-body: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Urdu Typesetting", "Noto Naskh Arabic", serif;
+  --font-display: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Urdu Typesetting", "Noto Naskh Arabic", serif;
+}
+html[lang="ar"] {
+  --font-body: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif;
+  --font-display: "Amiri", "Noto Naskh Arabic", "Traditional Arabic", serif;
+}
+
+/* বাংলা নাম ও গানের কথা সব ভাষাতেই বাংলা ফন্টে */
+[lang="bn"] {
+  --font-body: "Hind Siliguri", "Noto Sans Bengali", "Nirmala UI", sans-serif;
+  --font-display: "Tiro Bangla", "Noto Serif Bengali", "Hind Siliguri", serif;
+}
+:where([lang="bn"]):not(html) { font-family: var(--font-body); }
+
+/* নাস্তালিক লিপির জন্য বাড়তি লাইন-উচ্চতা */
+html[lang="ur"] body { line-height: 2.1; }
+html[lang="ur"] h1,
+html[lang="ur"] h2,
+html[lang="ur"] h3 { line-height: 1.8; }
+html[lang="ur"] .hero h1 { line-height: 1.6; }
+html[lang="ur"] .eyebrow,
+html[lang="ur"] .site-nav a,
+html[lang="ur"] .btn { line-height: 2; }
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3 { line-height: 1.45; }
+
+[dir="rtl"] .flip-rtl { transform: scaleX(-1); }
+[dir="rtl"] .basmala { text-align: right; }
+[dir="rtl"] .brand-latin { direction: ltr; }
+html[lang="ur"] .grad-text,
+html[lang="ar"] .grad-text { padding: 0.25em 0 0.35em; }
+html[lang="en"] .hero h1,
+html[lang="hi"] .hero h1 { font-size: clamp(42px, 5.6vw, 80px); }

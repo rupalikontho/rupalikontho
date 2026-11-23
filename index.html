@@ -1,8 +1,12 @@
 <!doctype html>
-<html lang="bn">
+<html lang="bn" data-title-key="title.home">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () { try { var l = new URLSearchParams(location.search).get("lang") || localStorage.getItem("rk-lang");
+      if (/^(en|hi|ur|ar)$/.test(l || "")) { var h = document.documentElement; h.lang = l; h.dir = (l === "ur" || l === "ar") ? "rtl" : "ltr"; } } catch (e) {} })();
+  </script>
   <title>রূপালী কণ্ঠ — বাংলাদেশের ইসলামী রেকর্ড লেবেল</title>
   <meta name="description" content="রূপালী কণ্ঠ (Rupali Kontho) — বাংলাদেশের একটি ইসলামী রেকর্ড লেবেল। হামদ, নাত, গজল ও নাশীদ — শুদ্ধ কথা, সুন্দর কণ্ঠ আর মার্জিত পরিবেশনায়।">
   <meta name="theme-color" content="#120e0d">
@@ -39,32 +43,34 @@
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">মূল অংশে যান</a>
+  <a class="skip-link" href="#main" data-i18n="skip">মূল অংশে যান</a>
 
   <!-- ===== হেডার ===== -->
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="রূপালী কণ্ঠ — হোম">
+      <a class="brand" href="#top" aria-label="রূপালী কণ্ঠ — হোম" data-i18n-attr="aria-label:home.aria">
         <img class="brand-logo" src="assets/img/logo-192.png" width="48" height="48" alt="">
         <span class="brand-text">
-          <span class="brand-name">রূপালী কণ্ঠ</span>
+          <span class="brand-name" lang="bn">রূপালী কণ্ঠ</span>
           <span class="brand-latin">RUPALI KONTHO</span>
         </span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="মেনু খুলুন">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="মেনু খুলুন" data-i18n-attr="aria-label:menu.open">
         <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
 
-      <nav class="site-nav" id="site-nav" aria-label="প্রধান মেনু">
-        <a href="#music">সংগীত</a>
-        <a href="/lyrics">লিরিক্স</a>
-        <a href="#about">আমাদের কথা</a>
-        <a href="#services">সেবা</a>
-        <a href="#join">শিল্পী আহ্বান</a>
-        <a class="nav-cta" href="#contact">যোগাযোগ</a>
+      <nav class="site-nav" id="site-nav" aria-label="প্রধান মেনু" data-i18n-attr="aria-label:nav.aria">
+        <a href="#music" data-i18n="nav.music">সংগীত</a>
+        <a href="/lyrics" data-i18n="nav.lyrics">লিরিক্স</a>
+        <a href="#about" data-i18n="nav.about">আমাদের কথা</a>
+        <a href="#services" data-i18n="nav.services">সেবা</a>
+        <a href="#join" data-i18n="nav.join">শিল্পী আহ্বান</a>
+        <a class="nav-cta" href="#contact" data-i18n="nav.contact">যোগাযোগ</a>
       </nav>
+
+      <div class="lang-switch" data-lang-switch></div>
     </div>
   </header>
 
@@ -74,21 +80,21 @@
       <div class="container hero-inner">
         <div class="hero-copy">
           <p class="basmala" lang="ar" dir="rtl">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
-          <p class="eyebrow">বাংলাদেশের ইসলামী রেকর্ড লেবেল</p>
-          <h1>কণ্ঠে কণ্ঠে<br><span class="grad-text">ঈমানের সুর</span></h1>
-          <p class="lead">হামদ, নাত, গজল ও নাশীদ — শুদ্ধ কথা, সুন্দর কণ্ঠ আর মার্জিত পরিবেশনায় পৌঁছে যাক আপনার হৃদয়ে।</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">বাংলাদেশের ইসলামী রেকর্ড লেবেল</p>
+          <h1><span data-i18n="hero.h1a">কণ্ঠে কণ্ঠে</span><br><span class="grad-text" data-i18n="hero.h1b">ঈমানের সুর</span></h1>
+          <p class="lead" data-i18n="hero.lead">হামদ, নাত, গজল ও নাশীদ — শুদ্ধ কথা, সুন্দর কণ্ঠ আর মার্জিত পরিবেশনায় পৌঁছে যাক আপনার হৃদয়ে।</p>
           <div class="btn-row">
             <a class="btn btn-primary" href="#music" data-link="youtube" data-fallback="#music">
               <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15L19.5 12z" fill="currentColor"/></svg>
-              <span data-label-fallback="আমাদের সংগীত">ইউটিউবে শুনুন</span>
+              <span data-i18n="hero.cta.youtube" data-i18n-fallback="hero.cta.fallback">ইউটিউবে শুনুন</span>
             </a>
-            <a class="btn btn-ghost" href="#join">শিল্পী হিসেবে যুক্ত হোন</a>
+            <a class="btn btn-ghost" href="#join" data-i18n="hero.cta.join">শিল্পী হিসেবে যুক্ত হোন</a>
           </div>
         </div>
 
         <div class="hero-art">
           <div class="arch">
-            <svg viewBox="0 0 400 520" role="img" aria-label="মিহরাব আকৃতির খিলানের ভেতরে চাঁদ ও কণ্ঠের তরঙ্গ">
+            <svg viewBox="0 0 400 520" role="img" aria-label="মিহরাব আকৃতির খিলানের ভেতরে চাঁদ ও কণ্ঠের তরঙ্গ" data-i18n-attr="aria-label:hero.art">
               <defs>
                 <pattern id="rkStar" width="40" height="40" patternUnits="userSpaceOnUse">
                   <path d="M10 10H30V30H10Z M20 5.86L34.14 20L20 34.14L5.86 20Z M0 0L10 10 M40 0L30 10 M0 40L10 30 M40 40L30 30 M20 0V5.86 M40 20H34.14 M20 40V34.14 M0 20H5.86" fill="none" stroke="#d9dee1" stroke-opacity="0.09" stroke-width="1"/>
@@ -139,10 +145,10 @@
                 <svg width="18" height="18" viewBox="0 0 24 24"><path d="M7 4.5v15L19.5 12z" fill="currentColor"/></svg>
               </span>
               <span class="now-text">
-                <span class="now-label">নতুন রিলিজ</span>
-                <span class="now-title" data-label-fallback="হামদ, নাত, গজল ও নাশীদ">সর্বশেষ হামদ ও নাশীদ শুনুন</span>
+                <span class="now-label" data-i18n="now.label">নতুন রিলিজ</span>
+                <span class="now-title" data-i18n="now.title" data-i18n-fallback="now.fallback">সর্বশেষ হামদ ও নাশীদ শুনুন</span>
               </span>
-              <svg class="now-arrow" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg class="now-arrow flip-rtl" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
         </div>
@@ -150,14 +156,14 @@
     </section>
 
     <!-- ===== ধারা রিবন ===== -->
-    <div class="ribbon" aria-label="আমাদের সংগীতের ধারা">
+    <div class="ribbon" aria-label="আমাদের সংগীতের ধারা" data-i18n-attr="aria-label:genres.aria">
       <ul class="container ribbon-list">
-        <li>হামদ</li>
-        <li>নাত</li>
-        <li>গজল</li>
-        <li>নাশীদ</li>
-        <li>ইসলামী সংগীত</li>
-        <li>কিরাত</li>
+        <li data-i18n="genre.hamd">হামদ</li>
+        <li data-i18n="genre.naat">নাত</li>
+        <li data-i18n="genre.gojol">গজল</li>
+        <li data-i18n="genre.nasheed">নাশীদ</li>
+        <li data-i18n="genre.islamic">ইসলামী সংগীত</li>
+        <li data-i18n="genre.qirat">কিরাত</li>
       </ul>
     </div>
 
@@ -166,35 +172,35 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <p class="eyebrow">আমাদের সংগীত</p>
-            <h2>যে সুরে হৃদয় খুঁজে পায় প্রশান্তি</h2>
+            <p class="eyebrow" data-i18n="music.eyebrow">আমাদের সংগীত</p>
+            <h2 data-i18n="music.h2">যে সুরে হৃদয় খুঁজে পায় প্রশান্তি</h2>
           </div>
           <a class="text-link" href="#music" data-link="youtube" data-hide-empty>
-            ইউটিউব চ্যানেলে সব দেখুন
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="music.link">ইউটিউব চ্যানেলে সব দেখুন</span>
+            <svg class="flip-rtl" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
 
         <div class="genre-grid">
           <article class="genre-card">
             <div class="genre-cover tone-1" aria-hidden="true"><span lang="ar">حمد</span></div>
-            <h3>হামদ</h3>
-            <p>মহান আল্লাহ তাআলার প্রশংসা ও কৃতজ্ঞতায় রচিত সংগীত।</p>
+            <h3 data-i18n="genre.hamd">হামদ</h3>
+            <p data-i18n="genre.hamd.desc">মহান আল্লাহ তাআলার প্রশংসা ও কৃতজ্ঞতায় রচিত সংগীত।</p>
           </article>
           <article class="genre-card">
             <div class="genre-cover tone-2" aria-hidden="true"><span lang="ar">نعت</span></div>
-            <h3>নাত</h3>
-            <p>প্রিয় নবী মুহাম্মদ (সা.)-এর প্রতি ভালোবাসা ও শ্রদ্ধায় রচিত সংগীত।</p>
+            <h3 data-i18n="genre.naat">নাত</h3>
+            <p data-i18n="genre.naat.desc">প্রিয় নবী মুহাম্মদ (সা.)-এর প্রতি ভালোবাসা ও শ্রদ্ধায় রচিত সংগীত।</p>
           </article>
           <article class="genre-card">
             <div class="genre-cover tone-3" aria-hidden="true"><span lang="ar">غزل</span></div>
-            <h3>গজল</h3>
-            <p>ঈমান, আখিরাত আর জীবনবোধের কথা নিয়ে হৃদয়ছোঁয়া ইসলামী গান।</p>
+            <h3 data-i18n="genre.gojol">গজল</h3>
+            <p data-i18n="genre.gojol.desc">ঈমান, আখিরাত আর জীবনবোধের কথা নিয়ে হৃদয়ছোঁয়া ইসলামী গান।</p>
           </article>
           <article class="genre-card">
             <div class="genre-cover tone-4" aria-hidden="true"><span lang="ar">نشيد</span></div>
-            <h3>নাশীদ</h3>
-            <p>সুরেলা কণ্ঠের সমবেত বা একক পরিবেশনায় ইসলামী সংগীত।</p>
+            <h3 data-i18n="genre.nasheed">নাশীদ</h3>
+            <p data-i18n="genre.nasheed.desc">সুরেলা কণ্ঠের সমবেত বা একক পরিবেশনায় ইসলামী সংগীত।</p>
           </article>
         </div>
 
@@ -213,10 +219,10 @@
     <section class="section band" id="about">
       <div class="container about-inner">
         <div class="about-copy">
-          <p class="eyebrow">আমাদের কথা</p>
-          <h2>সুরে সুরে কল্যাণের বার্তা</h2>
-          <p>রূপালী কণ্ঠ বাংলাদেশের একটি ইসলামী রেকর্ড লেবেল। আমরা হামদ, নাত, গজল ও নাশীদ প্রযোজনা ও প্রকাশ করি — যেন প্রতিটি কথা হয় অর্থবহ, প্রতিটি কণ্ঠ ধারণ করা হয় যত্নে, আর প্রতিটি পরিবেশনা থাকে মার্জিত।</p>
-          <p>আমাদের বিশ্বাস, সুন্দর কণ্ঠে উচ্চারিত একটি ভালো কথা মানুষের হৃদয়ে দীর্ঘদিন বেঁচে থাকে। সেই কথাগুলো ঘরে ঘরে পৌঁছে দেওয়াই আমাদের কাজ।</p>
+          <p class="eyebrow" data-i18n="about.eyebrow">আমাদের কথা</p>
+          <h2 data-i18n="about.h2">সুরে সুরে কল্যাণের বার্তা</h2>
+          <p data-i18n="about.p1">রূপালী কণ্ঠ বাংলাদেশের একটি ইসলামী রেকর্ড লেবেল। আমরা হামদ, নাত, গজল ও নাশীদ প্রযোজনা ও প্রকাশ করি — যেন প্রতিটি কথা হয় অর্থবহ, প্রতিটি কণ্ঠ ধারণ করা হয় যত্নে, আর প্রতিটি পরিবেশনা থাকে মার্জিত।</p>
+          <p data-i18n="about.p2">আমাদের বিশ্বাস, সুন্দর কণ্ঠে উচ্চারিত একটি ভালো কথা মানুষের হৃদয়ে দীর্ঘদিন বেঁচে থাকে। সেই কথাগুলো ঘরে ঘরে পৌঁছে দেওয়াই আমাদের কাজ।</p>
         </div>
 
         <ul class="values">
@@ -225,8 +231,8 @@
               <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H11v16H5.5c-.8 0-1.5-.7-1.5-1.5zM20 5.5c0-.8-.7-1.5-1.5-1.5H13v16h5.5c.8 0 1.5-.7 1.5-1.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
             </span>
             <div>
-              <h3>অর্থবহ কথা</h3>
-              <p>শুদ্ধ ও অর্থবহ কথায় রচিত সংগীত, যা হৃদয়ে ঈমানের আলো জাগায়।</p>
+              <h3 data-i18n="v1.h">অর্থবহ কথা</h3>
+              <p data-i18n="v1.p">শুদ্ধ ও অর্থবহ কথায় রচিত সংগীত, যা হৃদয়ে ঈমানের আলো জাগায়।</p>
             </div>
           </li>
           <li>
@@ -234,8 +240,8 @@
               <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </span>
             <div>
-              <h3>যত্নের প্রযোজনা</h3>
-              <p>রেকর্ডিং, মিক্সিং থেকে চিত্রায়ণ — প্রতিটি ধাপে পেশাদার যত্ন।</p>
+              <h3 data-i18n="v2.h">যত্নের প্রযোজনা</h3>
+              <p data-i18n="v2.p">রেকর্ডিং, মিক্সিং থেকে চিত্রায়ণ — প্রতিটি ধাপে পেশাদার যত্ন।</p>
             </div>
           </li>
           <li>
@@ -243,8 +249,8 @@
               <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 3l2.2 6.3L20.5 12l-6.3 2.2L12 20.5l-2.2-6.3L3.5 12l6.3-2.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
             </span>
             <div>
-              <h3>নতুন কণ্ঠের মঞ্চ</h3>
-              <p>প্রতিভাবান নতুন শিল্পীদের খুঁজে বের করে এগিয়ে নেওয়া।</p>
+              <h3 data-i18n="v3.h">নতুন কণ্ঠের মঞ্চ</h3>
+              <p data-i18n="v3.p">প্রতিভাবান নতুন শিল্পীদের খুঁজে বের করে এগিয়ে নেওয়া।</p>
             </div>
           </li>
         </ul>
@@ -256,8 +262,8 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <p class="eyebrow">আমাদের সেবা</p>
-            <h2>আপনার সংগীত — স্টুডিও থেকে শ্রোতার কাছে</h2>
+            <p class="eyebrow" data-i18n="services.eyebrow">আমাদের সেবা</p>
+            <h2 data-i18n="services.h2">আপনার সংগীত — স্টুডিও থেকে শ্রোতার কাছে</h2>
           </div>
         </div>
 
@@ -266,29 +272,29 @@
             <span class="icon-badge" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </span>
-            <h3>অডিও রেকর্ডিং</h3>
-            <p>স্টুডিওতে কণ্ঠ ধারণ, মিক্সিং ও মাস্টারিং।</p>
+            <h3 data-i18n="s1.h">অডিও রেকর্ডিং</h3>
+            <p data-i18n="s1.p">স্টুডিওতে কণ্ঠ ধারণ, মিক্সিং ও মাস্টারিং।</p>
           </article>
           <article class="service-card">
             <span class="icon-badge" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 10.5l5-3v9l-5-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
             </span>
-            <h3>ভিডিও নির্মাণ</h3>
-            <p>গানের চিত্রায়ণ, সম্পাদনা ও লিরিক ভিডিও।</p>
+            <h3 data-i18n="s2.h">ভিডিও নির্মাণ</h3>
+            <p data-i18n="s2.p">গানের চিত্রায়ণ, সম্পাদনা ও লিরিক ভিডিও।</p>
           </article>
           <article class="service-card">
             <span class="icon-badge" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
             </span>
-            <h3>ডিজিটাল প্রকাশ</h3>
-            <p>ইউটিউব, ফেসবুকসহ বিভিন্ন প্ল্যাটফর্মে প্রকাশ ও প্রচার।</p>
+            <h3 data-i18n="s3.h">ডিজিটাল প্রকাশ</h3>
+            <p data-i18n="s3.p">ইউটিউব, ফেসবুকসহ বিভিন্ন প্ল্যাটফর্মে প্রকাশ ও প্রচার।</p>
           </article>
           <article class="service-card">
             <span class="icon-badge" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 3l7 3v5.5c0 4.5-3 8-7 9.5-4-1.5-7-5-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
-            <h3>কপিরাইট সুরক্ষা</h3>
-            <p>আপনার কনটেন্টের স্বত্ব ও আয়ের সঠিক ব্যবস্থাপনা।</p>
+            <h3 data-i18n="s4.h">কপিরাইট সুরক্ষা</h3>
+            <p data-i18n="s4.p">আপনার কনটেন্টের স্বত্ব ও আয়ের সঠিক ব্যবস্থাপনা।</p>
           </article>
         </div>
       </div>
@@ -299,21 +305,21 @@
       <div class="container">
         <div class="join-card">
           <div class="join-copy">
-            <p class="eyebrow eyebrow-dark">শিল্পী আহ্বান</p>
-            <h2>আপনার কণ্ঠও হতে পারে রূপালী কণ্ঠ</h2>
-            <p>হামদ, নাত বা গজল গাইতে ভালোবাসেন? আপনার গাওয়া একটি নমুনা (অডিও বা ভিডিও লিংক) আপনার নাম ও মোবাইল নম্বরসহ পাঠিয়ে দিন। আমাদের দল শুনে আপনার সঙ্গে যোগাযোগ করবে।</p>
+            <p class="eyebrow eyebrow-dark" data-i18n="join.eyebrow">শিল্পী আহ্বান</p>
+            <h2 data-i18n="join.h2">আপনার কণ্ঠও হতে পারে রূপালী কণ্ঠ</h2>
+            <p data-i18n="join.p">হামদ, নাত বা গজল গাইতে ভালোবাসেন? আপনার গাওয়া একটি নমুনা (অডিও বা ভিডিও লিংক) আপনার নাম ও মোবাইল নম্বরসহ পাঠিয়ে দিন। আমাদের দল শুনে আপনার সঙ্গে যোগাযোগ করবে।</p>
           </div>
           <img class="join-deco" src="assets/img/speed-lines.png" width="180" height="137" alt="" aria-hidden="true">
           <div class="join-actions">
-            <a class="btn btn-dark" href="mailto:info@rupalikontho.com?subject=%E0%A6%B6%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%AA%E0%A7%80%20%E0%A6%86%E0%A6%AC%E0%A7%87%E0%A6%A6%E0%A6%A8" data-link="email" data-mail-subject="শিল্পী আবেদন">
+            <a class="btn btn-dark" href="mailto:info@rupalikontho.com?subject=%E0%A6%B6%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%AA%E0%A7%80%20%E0%A6%86%E0%A6%AC%E0%A7%87%E0%A6%A6%E0%A6%A8" data-link="email" data-mail-subject="শিল্পী আবেদন — Artist application">
               <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-              ইমেইলে নমুনা পাঠান
+              <span data-i18n="join.email">ইমেইলে নমুনা পাঠান</span>
             </a>
             <a class="btn btn-dark-ghost" href="#contact" data-link="whatsapp" data-hide-empty>
               <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-              হোয়াটসঅ্যাপে পাঠান
+              <span data-i18n="join.whatsapp">হোয়াটসঅ্যাপে পাঠান</span>
             </a>
-            <p class="join-note">ইমেইল: <a href="mailto:info@rupalikontho.com" data-link="email" data-text>info@rupalikontho.com</a></p>
+            <p class="join-note"><span data-i18n="join.note">ইমেইল:</span> <a href="mailto:info@rupalikontho.com" data-link="email" data-text dir="ltr">info@rupalikontho.com</a></p>
           </div>
         </div>
       </div>
@@ -324,46 +330,46 @@
   <footer class="site-footer" id="contact">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="#top" aria-label="রূপালী কণ্ঠ — উপরে যান">
+        <a class="brand" href="#top" aria-label="রূপালী কণ্ঠ — হোম" data-i18n-attr="aria-label:home.aria">
           <img class="brand-logo" src="assets/img/logo-192.png" width="48" height="48" alt="">
           <span class="brand-text">
-            <span class="brand-name">রূপালী কণ্ঠ</span>
+            <span class="brand-name" lang="bn">রূপালী কণ্ঠ</span>
             <span class="brand-latin">RUPALI KONTHO</span>
           </span>
         </a>
-        <p>কণ্ঠে কণ্ঠে ঈমানের সুর।</p>
+        <p data-i18n="footer.tagline">কণ্ঠে কণ্ঠে ঈমানের সুর।</p>
       </div>
 
       <div>
-        <h2 class="footer-title">যোগাযোগ</h2>
+        <h2 class="footer-title" data-i18n="nav.contact">যোগাযোগ</h2>
         <ul class="footer-list">
-          <li><a href="mailto:info@rupalikontho.com" data-link="email" data-text>info@rupalikontho.com</a></li>
+          <li><a href="mailto:info@rupalikontho.com" data-link="email" data-text dir="ltr">info@rupalikontho.com</a></li>
           <li data-link-row="phone"><a href="#" data-link="phone" data-text></a></li>
           <li data-link-row="address"><span data-text-of="address"></span></li>
         </ul>
       </div>
 
       <div>
-        <h2 class="footer-title">দ্রুত লিংক</h2>
+        <h2 class="footer-title" data-i18n="footer.links">দ্রুত লিংক</h2>
         <ul class="footer-list">
-          <li><a href="#music">সংগীত</a></li>
-          <li><a href="/lyrics">লিরিক্স</a></li>
-          <li><a href="#about">আমাদের কথা</a></li>
-          <li><a href="#services">সেবা</a></li>
-          <li><a href="#join">শিল্পী আহ্বান</a></li>
+          <li><a href="#music" data-i18n="nav.music">সংগীত</a></li>
+          <li><a href="/lyrics" data-i18n="nav.lyrics">লিরিক্স</a></li>
+          <li><a href="#about" data-i18n="nav.about">আমাদের কথা</a></li>
+          <li><a href="#services" data-i18n="nav.services">সেবা</a></li>
+          <li><a href="#join" data-i18n="nav.join">শিল্পী আহ্বান</a></li>
         </ul>
       </div>
 
       <div data-social-block>
-        <h2 class="footer-title">আমাদের সাথে থাকুন</h2>
+        <h2 class="footer-title" data-i18n="footer.follow">আমাদের সাথে থাকুন</h2>
         <div class="social">
-          <a href="#" data-link="youtube" data-hide-empty aria-label="ইউটিউব">
+          <a href="#" data-link="youtube" data-hide-empty aria-label="ইউটিউব" data-i18n-attr="aria-label:social.youtube">
             <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9v6l5-3z" fill="currentColor"/></svg>
-            ইউটিউব
+            <span data-i18n="social.youtube">ইউটিউব</span>
           </a>
-          <a href="#" data-link="facebook" data-hide-empty aria-label="ফেসবুক">
+          <a href="#" data-link="facebook" data-hide-empty aria-label="ফেসবুক" data-i18n-attr="aria-label:social.facebook">
             <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4.5h-3A3.5 3.5 0 0 0 10.5 8v2.5H8V14h2.5v6H14v-6h2.6l.4-3.5h-3V8.6c0-.3.3-.6.6-.6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-            ফেসবুক
+            <span data-i18n="social.facebook">ফেসবুক</span>
           </a>
         </div>
       </div>
@@ -371,13 +377,15 @@
 
     <div class="container footer-bottom">
       <div class="footer-bottom-inner">
-        <p>© <span data-year>২০২৬</span> রূপালী কণ্ঠ। সর্বস্বত্ব সংরক্ষিত।</p>
-        <p>rupalikontho.com</p>
+        <p>© <span data-year>২০২৬</span> <span data-i18n="footer.rights">রূপালী কণ্ঠ। সর্বস্বত্ব সংরক্ষিত।</span></p>
+        <p dir="ltr">rupalikontho.com</p>
       </div>
     </div>
   </footer>
 
   <script src="assets/js/config.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n-strings.js"></script>
+  <script src="assets/js/i18n.js"></script>
 </body>
 </html>

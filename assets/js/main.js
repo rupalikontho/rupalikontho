@@ -37,6 +37,10 @@
       el.querySelectorAll("[data-label-fallback]").forEach(function (lbl) {
         lbl.textContent = lbl.getAttribute("data-label-fallback");
       });
+      // অনুবাদের জন্য: বিকল্প লেখার key বসানো (i18n.js পরে সঠিক ভাষায় লিখে দেবে)
+      el.querySelectorAll("[data-i18n-fallback]").forEach(function (lbl) {
+        lbl.setAttribute("data-i18n", lbl.getAttribute("data-i18n-fallback"));
+      });
     } else if (el.hasAttribute("data-hide-empty") || el.hasAttribute("data-text")) {
       el.hidden = true;
     }
@@ -67,7 +71,8 @@
   if (toggle && nav) {
     var setOpen = function (open) {
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      toggle.setAttribute("aria-label", open ? "মেনু বন্ধ করুন" : "মেনু খুলুন");
+      var i18n = window.RK_I18N;
+      toggle.setAttribute("aria-label", i18n ? i18n.t(open ? "menu.close" : "menu.open") : (open ? "মেনু বন্ধ করুন" : "মেনু খুলুন"));
       document.body.classList.toggle("nav-open", open);
     };
     toggle.addEventListener("click", function () {
