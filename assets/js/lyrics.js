@@ -191,6 +191,12 @@
     var song = null;
     for (var i = 0; i < songs.length; i++) {
       if (songs[i].slug === slug) { song = songs[i]; break; }
+      // পুরোনো লিংক (aliases) এলে নতুন লিংকে পাঠানো
+      if (slug && (songs[i].aliases || []).indexOf(slug) !== -1) {
+        song = songs[i];
+        if (history.replaceState) history.replaceState(null, "", location.pathname + location.search + "#" + encodeURIComponent(song.slug));
+        break;
+      }
     }
     if (song) showDetail(song, keepScroll === true); else showList();
   }

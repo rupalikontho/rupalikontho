@@ -37,7 +37,8 @@
 window.LYRICS = [
 
   {
-    slug: "tomra-jaio-na-bhulia",
+    slug: "tomra-jaiyo-na-bhuliya",
+    aliases: ["tomra-jaio-na-bhulia"],
     title: "তোমরা যাইও না ভুলিয়া",
     category: "গজল",
     singer: "",
