@@ -9,6 +9,7 @@
     slug     — লিংকের জন্য ছোট ইংরেজি নাম, স্পেসের বদলে "-" (যেমন "abdullah-al-mamun")
     name     — শিল্পীর নাম (বাংলায়) — লিরিক্সে যে নামে লেখা, হুবহু সেই নাম দিন,
                তাহলে তাঁর গানগুলো নিজে থেকেই তাঁর পাতায় দেখাবে
+    name_en  — ইংরেজিতে নাম (ঐচ্ছিক) — অন্য ভাষায় সাইট দেখলে এই নাম দেখাবে
     roles    — ভূমিকা: "singer" (কণ্ঠশিল্পী), "lyricist" (গীতিকার), "composer" (সুরকার)
                একাধিক হলে: ["singer", "composer"]
     photo    — ছবির ঠিকানা; ছবিটি assets/img/artists/ ফোল্ডারে রাখুন
@@ -23,6 +24,7 @@
   {
     slug: "shilpir-nam",
     name: "শিল্পীর নাম",
+    name_en: "Shilpir Nam",
     roles: ["singer"],
     photo: "assets/img/artists/shilpir-nam.jpg",
     bio: "শিল্পীর ছোট পরিচিতি।",
@@ -32,5 +34,41 @@
   },
 */
 window.ARTISTS = [
+
+  {
+    slug: "rajiya-risha",
+    name: "রাজিয়া রিশা",
+    name_en: "Rajiya Risha",
+    roles: ["singer"],
+    photo: "assets/img/artists/rajiya-risha.jpg",
+    bio: "",
+    bio_en: "", bio_hi: "", bio_ur: "", bio_ar: "",
+    youtube: "",
+    facebook: ""
+  },
+
+  {
+    slug: "mahmuda",
+    name: "মাহমুদা",
+    name_en: "Mahmuda",
+    roles: ["singer"],
+    photo: "assets/img/artists/mahmuda.jpg",
+    bio: "",
+    bio_en: "", bio_hi: "", bio_ur: "", bio_ar: "",
+    youtube: "",
+    facebook: ""
+  },
+
+  {
+    slug: "tawhidul-islam-sadi",
+    name: "তাওহিদুল ইসলাম সাদী",
+    name_en: "Tawhidul Islam Sadi",
+    roles: ["singer"],
+    photo: "assets/img/artists/tawhidul-islam-sadi.jpg",
+    bio: "",
+    bio_en: "", bio_hi: "", bio_ur: "", bio_ar: "",
+    youtube: "",
+    facebook: ""
+  }
 
 ];

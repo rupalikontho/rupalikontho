@@ -21,6 +21,12 @@
     return n;
   }
 
+  // বাংলা ছাড়া অন্য ভাষায় ইংরেজি নাম (থাকলে)
+  function displayName(a) {
+    var useEn = curLang() !== "bn" && a.name_en;
+    return { text: useEn ? a.name_en : a.name, lang: useEn ? "en" : "bn" };
+  }
+
   function roleText(a) {
     return (a.roles || []).map(function (r) { return ROLE_KEYS[r] ? T(ROLE_KEYS[r]) : r; }).join(" · ");
   }
@@ -31,7 +37,7 @@
     if (a.photo) {
       var img = document.createElement("img");
       img.src = a.photo;
-      img.alt = a.name;
+      img.alt = displayName(a).text;
       img.loading = "lazy";
       img.decoding = "async";
       img.onerror = function () { img.remove(); fallback(); };
@@ -46,8 +52,9 @@
     var link = el("a", "artist-card");
     link.href = (base || "") + "#" + encodeURIComponent(a.slug);
     link.appendChild(portrait(a));
-    var name = el("h3", null, a.name);
-    name.lang = "bn";
+    var dn = displayName(a);
+    var name = el("h3", null, dn.text);
+    name.lang = dn.lang;
     link.appendChild(name);
     var roles = roleText(a);
     if (roles) link.appendChild(el("p", "artist-role", roles));
@@ -138,7 +145,9 @@
       els.roles.appendChild(el("span", "tag", ROLE_KEYS[r] ? T(ROLE_KEYS[r]) : r));
     });
 
-    els.name.textContent = a.name;
+    var dn = displayName(a);
+    els.name.textContent = dn.text;
+    els.name.lang = dn.lang;
 
     var l = curLang();
     var bio = (l !== "bn" && a["bio_" + l]) ? { text: a["bio_" + l], lang: l } : (a.bio ? { text: a.bio, lang: "bn" } : null);
@@ -170,7 +179,7 @@
     listView.hidden = true;
     els.detail.hidden = false;
     document.body.classList.add("detail-open");
-    document.title = a.name + T("title.artistSuffix");
+    document.title = dn.text + T("title.artistSuffix");
     if (!keepScroll) window.scrollTo(0, 0);
   }
 

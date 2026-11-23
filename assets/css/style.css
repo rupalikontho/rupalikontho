@@ -1094,7 +1094,8 @@ body.detail-open .lyrics-section { padding-top: clamp(24px, 4vw, 48px); }
   grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
   gap: 32px 20px;
 }
-.artist-grid--teaser { grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); }
+.artist-grid--teaser { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1024px) { .artist-grid--teaser { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .artists-teaser .artist-grid { max-width: 1200px; }
 
 .artist-card {
