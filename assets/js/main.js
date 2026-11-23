@@ -12,7 +12,10 @@
       return "mailto:" + v + (subject ? "?subject=" + encodeURIComponent(subject) : "");
     }
     if (key === "phone") return "tel:" + v.replace(/[^\d+]/g, "");
-    if (key === "whatsapp") return "https://wa.me/" + v.replace(/\D/g, "");
+    if (key === "whatsapp") {
+      var msg = el && el.getAttribute("data-wa-text");
+      return "https://wa.me/" + v.replace(/\D/g, "") + (msg ? "?text=" + encodeURIComponent(msg) : "");
+    }
     return v;
   }
 
@@ -30,7 +33,7 @@
         el.setAttribute("rel", "noopener");
       }
       if (el.hasAttribute("data-text")) {
-        el.textContent = key === "phone" ? toBn(cfg[key]) : cfg[key];
+        el.textContent = cfg[key];
       }
     } else if (el.hasAttribute("data-fallback")) {
       el.setAttribute("href", el.getAttribute("data-fallback"));

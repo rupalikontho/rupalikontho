@@ -8,14 +8,14 @@
   উদাহরণ:
     youtube:  "https://www.youtube.com/@rupalikontho",
     facebook: "https://www.facebook.com/rupalikontho",
-    whatsapp: "8801XXXXXXXXX",   // দেশের কোডসহ, + বা স্পেস ছাড়া
+    whatsapp: "+880 1XXX-XXXXXX",  // দেশের কোডসহ; যেভাবে লিখবেন সাইটে সেভাবেই দেখাবে
     phone:    "+8801XXXXXXXXX",
 */
 window.SITE_CONFIG = {
   youtube: "",
   facebook: "",
   email: "info@rupalikontho.com",
-  whatsapp: "",
+  whatsapp: "+880 1638-763367",
   phone: "",
   address: ""
 };

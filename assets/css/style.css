@@ -1204,3 +1204,6 @@ body.detail-open .lyrics-section { padding-top: clamp(24px, 4vw, 48px); }
   .artist-card h3 { font-size: 19px; }
   .artist-role { font-size: 14px; }
 }
+
+.footer-list .contact-link { gap: 8px; }
+.footer-list .contact-link svg { color: var(--orange); flex: none; }
