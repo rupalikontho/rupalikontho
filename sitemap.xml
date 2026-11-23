@@ -4,4 +4,8 @@
     <loc>https://rupalikontho.com/</loc>
     <changefreq>weekly</changefreq>
   </url>
+  <url>
+    <loc>https://rupalikontho.com/lyrics</loc>
+    <changefreq>weekly</changefreq>
+  </url>
 </urlset>
