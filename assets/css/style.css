@@ -1112,8 +1112,8 @@ body.detail-open .lyrics-section { padding-top: clamp(24px, 4vw, 48px); }
   position: relative;
   display: grid;
   place-items: center;
-  aspect-ratio: 4 / 5;
-  border-radius: 999px 999px 20px 20px;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--line);
   background-color: var(--surface);
